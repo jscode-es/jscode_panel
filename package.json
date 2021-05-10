@@ -1,0 +1,58 @@
+{
+	"name": "jscode",
+	"version": "1.0.0",
+	"description": "Aplicación escritorio",
+	"main": "dist/app.js",
+	"scripts": {
+		"start": "tsc && electron ./dist/app.js",
+		"build": "electron-builder",
+		"dev": "nodemon --exec npm start",
+		"publish": "electron-builder -p always",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JSCode-es/jscode_panel.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JSCode-es/jscode_panel/issues"
+	},
+	"homepage": "https://github.com/JSCode-es/jscode_panel#readme",
+	"build": {
+		"publish": [
+			{
+				"provider": "github",
+				"private": false,
+				"releaseType": "release",
+				"owner": "jscode-es",
+				"repo": "jscode_panel",
+				"token": "aadeaedada"
+			}
+		],
+		"appId": "es.jscode.panel",
+		"productName": "JSCode",
+		"copyrigth": "Copyrigth Jscode 2021",
+		"win": {
+			"targe": "nsis",
+			"icon": "./assets/icon/favicon.icon"
+		},
+		"nsis": {
+			"oneClick": true,
+			"perMachine": true,
+			"uninstallDisplayName": "Desinstalador",
+			"createDesktopShortcut": "always"
+		}
+	},
+	"devDependencies": {
+		"@types/electron": "^1.6.10",
+		"electron": "^12.0.7",
+		"electron-builder": "^22.11.2",
+		"jest": "^26.6.3"
+	},
+	"dependencies": {
+		"cross-env": "^7.0.3"
+	}
+}
