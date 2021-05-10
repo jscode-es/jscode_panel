@@ -1,0 +1,15 @@
+{
+    "include": ["bin/**/*"],
+    "exclude": ["node_modules","**/*.spec.ts"],
+    "compilerOptions": 
+    {
+        "removeComments": true,
+        "outDir": "./dist",
+        "module":"commonjs",
+        "strict":true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitThis": false,     
+    }
+}
